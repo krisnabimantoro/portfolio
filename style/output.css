@@ -594,12 +594,24 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .right-4 {
   right: 1rem;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .mx-auto {
@@ -633,6 +645,14 @@ video {
 
 .mt-28 {
   margin-top: 7rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .block {
@@ -757,12 +777,33 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-32 {
   padding-bottom: 8rem;
 }
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-center {
@@ -864,9 +905,27 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hamburger-line {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  height: 2px;
+  width: 30px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .hover\:bg-yellow-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:shadow-md:hover {
@@ -880,6 +939,12 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+@media (min-width: 640px) {
+  .sm\:pt-28 {
+    padding-top: 7rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:right-0 {
     right: 0px;
@@ -887,6 +952,10 @@ video {
 
   .lg\:ml-24 {
     margin-left: 6rem;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
   }
 
   .lg\:w-1\/2 {
@@ -913,5 +982,3 @@ video {
     line-height: 1.75rem;
   }
 }
-
-
