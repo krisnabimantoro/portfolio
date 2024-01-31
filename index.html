@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
   <body>
     <nav class="flex justify-start bg font-montserrat font-normal w-full fixed top-0 backdrop-blur-sm  z-10 scroll  ">
       <div class="container ">
-        <div class="flex items-center justify-between relative pl-4 ">
+        <div class="flex items-center justify-between relative pl-4 my-2">
           <div class="px-4 ">
             <img src="./img/profile.png" alt="profile" class="mr-6 h-10 w rounded-full" />
           </div>
@@ -28,7 +28,7 @@
               <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full  lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none ">
+            <nav id="nav-menu" class="hidden absolute py-3 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full  lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none ">
               <ul class="block lg:flex text-black lg:text-white">
                 <li class="group">
                   <a href="#home" class=" text-base py-2 mx-8 flex">Home</a>
@@ -37,7 +37,7 @@
                   <a href="#about" class="font-normal py-2 mx-8 flex">About</a>
                 </li>
                 <li class="group">
-                  <a href="#achievement" class=" font-normal py-2 mx-8 flex">Achievement</a>
+                  <a href="#experience" class=" font-normal py-2 mx-8 flex">Experience</a>
                 </li>
                 </li>
                 <li class="group">
@@ -60,7 +60,7 @@
     >
       <div class="container">
         <div class="flex flex-wrap h-screen">
-          <div class="w-full self-center px-4 text-white lg:w-1/2 pt-20">
+          <div class="w-full self-center px-4 text-white lg:w-1/2 pt-20 ">
             <h1 class="text-base font-semibold text-secondary lg:text-3xl">
               Hi everyone, I'm <span class="block font-bold text-slate-200 text-4xl lg:text-6xl"> Krisna Bimantoro</span>
             </h1>
@@ -76,8 +76,8 @@
             
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
-            <div class=" lg:right-0 lg:ml-24">
-              <img src="./img/profile.png" alt="" class="max-w-full mx-auto" />
+            <div class="relative mt-10 lg:right-0 lg:ml-24">
+              <img src="./img/profile.png" alt="" class="mx-auto max-w-80 lg:max-w-full " />
             </div>
           </div>
         </div>
@@ -98,6 +98,59 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="bg-gray-800 pt-16 pb-32" >
+      <div class="container font-montserrat">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center ">
+            <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl"> Experience</h1>
+
+          </div>
+          <div class="w-full self-end">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 text-white ">
+
+                <!-- Grid 1 -->
+                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
+                  <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto">
+                  <div class="flex-wrap ml-3 ">
+
+                    <h3 class="font-semibold text">Hackfest 2024</h3>
+                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                  </div>
+                </div>
+                
+                <!-- Grid 2 -->
+                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
+                  <img src="./img/gdsc.png" alt="gdsc" class="p w-14 h-14 rounded-xl my-auto">
+                  <div class="flex-wrap ml-3 ">
+
+                    <h3 class="font-semibold text">Hackfest 2024</h3>
+                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                  </div>
+                </div>
+                
+                
+                <!-- Grid 3 -->
+                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
+                  <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto">
+                  <div class="flex-wrap ml-3 ">
+
+                    <h3 class="font-semibold text">Hackfest 2024</h3>
+                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                  </div>
+                </div>
+
+                <div class="  hover:cursor-pointer hover:underline ">See more</div>
+              </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <div class="mb-96"></div>
