@@ -630,6 +630,16 @@ video {
   margin-bottom: auto;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -652,6 +662,10 @@ video {
 
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mb-96 {
+  margin-bottom: 24rem;
 }
 
 .block {
@@ -1080,6 +1094,10 @@ video {
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:pt-20 {
+    padding-top: 5rem;
   }
 
   .lg\:text-3xl {
