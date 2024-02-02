@@ -1,12 +1,16 @@
 {
 
   "scripts": {
-    "build":"npx tailwindcss -i ./src/input.css -o ./style/output.css --watch"
+
+    "build": "npx tailwindcss -i ./src/input.css -o ./style/output.css --watch"
+
   },
 
   "devDependencies": {
+
     "tailwindcss": "^3.4.1"
+
   }
 
-  
 }
+

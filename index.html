@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,17 @@
     />
     <link rel="stylesheet" href="./style/output.css" />
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
   </head>
 
   <body>
-    <nav class="flex justify-start bg font-montserrat font-normal w-full fixed top-0 backdrop-blur-sm  z-10 scroll  ">
-      <div class="container ">
+    <nav class="flex justify-start bg font-montserrat font-normal w-full fixed top-0 backdrop-blur-sm z-10 scroll">
+      <div class="container">
         <div class="flex items-center justify-between relative pl-4 my-2">
-          <div class="px-4 ">
+          <div class="px-4">
             <img src="./img/profile.png" alt="profile" class="mr-6 h-10 w rounded-full" />
           </div>
 
@@ -28,20 +32,23 @@
               <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-3 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full  lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none ">
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-3 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none"
+            >
               <ul class="block lg:flex text-black lg:text-white">
                 <li class="group">
-                  <a href="#home" class=" text-base py-2 mx-8 flex">Home</a>
+                  <a href="#home" class="text-base py-2 mx-8 flex">Home</a>
                 </li>
                 <li class="group">
                   <a href="#about" class="font-normal py-2 mx-8 flex">About</a>
                 </li>
                 <li class="group">
-                  <a href="#experience" class=" font-normal py-2 mx-8 flex">Experience</a>
+                  <a href="#experience" class="font-normal py-2 mx-8 flex">Experience</a>
                 </li>
-                </li>
+
                 <li class="group">
-                  <a href="#portfolio" class=" font-normal py-2 mx-8 flex">Portfolio</a>
+                  <a href="#portfolio" class="font-normal py-2 mx-8 flex">Portfolio</a>
                 </li>
                 <li class="group">
                   <a href="#clients" class="font-normal py-2 mx-8 flex">Contact</a>
@@ -60,9 +67,9 @@
     >
       <div class="container">
         <div class="flex flex-wrap h-screen">
-          <div class="w-full self-center px-4 text-white lg:w-1/2 pt-20 ">
+          <div class="w-full self-center px-4 text-white lg:w-1/2 pt-20">
             <h1 class="text-base font-semibold text-secondary lg:text-3xl">
-              Hi everyone, I'm <span class="block font-bold text-slate-200 text-4xl lg:text-6xl"> Krisna Bimantoro</span>
+              Hi everyone, I'm <span id="text" class="block font-bold text-slate-200 text-4xl lg:text-6xl"> Krisna Bimantoro</span>
             </h1>
             <h2 class="font-medium text-slate-300 mb-4 lg:text-lg">Student | Videography</h2>
             <p class="font-light mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ipsa?</p>
@@ -72,12 +79,10 @@
               class="text-sm font-semibold bg-secondary text-primary py-2.5 px-5 rounded-xl hover:shadow-md shadow hover:shadow-white hover:bg-yellow-300 duration-300 transition ease-in-out text-center rounded-bl-none"
               >Download CV</a
             >
-
-            
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:ml-24">
-              <img src="./img/profile.png" alt="" class="mx-auto max-w-80 lg:max-w-full " />
+              <img src="./img/profile.png" alt="" class="mx-auto max-w-80 lg:max-w-full" />
             </div>
           </div>
         </div>
@@ -88,9 +93,9 @@
     <section id="about" class="bg-gray-900 pt-16 lg:pt-20 pb-32">
       <div class="container font-montserrat">
         <div class="flex">
-          <div class="w-full text-white">
+          <div class="w-full text-white divHome" id="divHome">
             <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl">About Me</h1>
-            <h2 class="mt-16 font-thin text-center">
+            <h2 class="mt-16 font-thin text-center hover:translate-x-6 transition" id="example">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus fugiat impedit ad deserunt! Voluptates maiores ea cumque
               repellendus nostrum quas temporibus quasi tempore labore adipisci facere cum repudiandae numquam, iure nemo unde minus
               eligendi et illum corporis! Distinctio, voluptate nihil repudiandae nulla harum natus ea modi aspernatur illum sapiente ab.
@@ -101,77 +106,196 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="bg-gray-800 pt-16 lg:pt-20 pb-16" >
+    <section id="experience" class="bg-gray-800 pt-16 lg:pt-20 pb-16">
       <div class="container font-montserrat">
         <div class="flex flex-wrap">
-          <div class="w-full self-center ">
-            <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl"> Experience</h1>
-
+          <div class="w-full self-center">
+            <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl">Experience</h1>
           </div>
           <div class="w-full self-end">
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 text-white ">
-
-                <!-- Grid 1 -->
-                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
-                  <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto">
-                  <div class="flex-wrap ml-3 ">
-
-                    <h3 class="font-semibold text">Hackfest 2024</h3>
-                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
-                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
-                  </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 text-white">
+              <!-- Grid 1 -->
+              <div
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
                 </div>
-                
-                <!-- Grid 2 -->
-                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
-                  <img src="./img/gdsc.png" alt="gdsc" class="p w-14 h-14 rounded-xl my-auto">
-                  <div class="flex-wrap ml-3 ">
-
-                    <h3 class="font-semibold text">Hackfest 2024</h3>
-                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
-                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
-                  </div>
-                </div>
-                
-                
-                <!-- Grid 3 -->
-                <div class=" border-2 p-3  rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer">
-                  <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto">
-                  <div class="flex-wrap ml-3 ">
-
-                    <h3 class="font-semibold text">Hackfest 2024</h3>
-                    <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
-                    <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
-                  </div>
-                </div>
-
-                <div class="  hover:cursor-pointer hover:underline ">See more</div>
               </div>
+
+              <!-- Grid 2 -->
+              <div
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="p w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                </div>
+              </div>
+
+              <!-- Grid 3 -->
+              <div
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                </div>
+              </div>
+
+              <!-- Grid 4 -->
+              <div
+                id="grid4"
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                </div>
+              </div>
+
+              <!-- Grid 5 -->
+              <div
+                id="grid5"
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 duration-200 transition hover:cursor-pointer"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                </div>
+              </div>
+
+              <!-- Grid 6 -->
+              <div
+                id="grid6"
+                class="border-2 p-3 rounded-2xl flex hover:shadow-md hover:shadow-slate-400 hover:cursor-pointer transition duration-300 ease-in-out"
+              >
+                <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
+                <div class="flex-wrap ml-3">
+                  <h3 class="font-semibold text">Hackfest 2024</h3>
+                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
+                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                </div>
+              </div>
+
+              <div>
+                <label id="exp" class="hover:cursor-pointer hover:underline">See More</label>
+              </div>
+            </div>
+
+            <label for="tw-modal"></label>
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Portfolio -->
 
-  
-   <section id="portfolio" class="bg-gray-900 pt-16 lg:pt-20 pb-32">
-    <div class="container font-montserrat">
-      <div class="flex">
-        <div class="w-full text-white">
-          <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl">Portfolio</h1>
-          <h2 class="mt-16 font-thin text-center">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus fugiat impedit ad deserunt! Voluptates maiores ea cumque
-            repellendus nostrum quas temporibus quasi tempore labore adipisci facere cum repudiandae numquam, iure nemo unde minus
-            eligendi et illum corporis! Distinctio, voluptate nihil repudiandae nulla harum natus ea modi aspernatur illum sapiente ab.
-          </h2>
+    <section id="portfolio" class="bg-gray-900 pt-16 lg:pt-20 pb-32">
+      <div class="container font-montserrat">
+        <div class="flex mb-7">
+          <div class="w-full text-white">
+            <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl">Portfolio</h1>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="w-2/12 self-center items-center">
+            <div class="w-full text-right">
+              <button onclick="prev()" class="p-3 rounded-full bg-white border border-gray-100 shadow-lg mr-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div id="sliderContainer" class="w-10/12 overflow-hidden font-montserrat">
+            <ul id="slider" class="flex w-full">
+              <li class="p-5">
+                <div class="border rounded-lg p-5 h-full">
+                  <img class="h-50 w-full object-cover rounded-md" src="./img/card/kalkulator.png" alt="" />
+                  <h2 class="my-2 text-2xl font-bold text-white">Some Big Heading.</h2>
+                  <p class="mt-2 text-slate-200 font-thin">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere animi earum quasi deleniti, maxime numquam.
+                  </p>
+                </div>
+              </li>
+              <li class="p-5">
+                <div class="border rounded-lg p-5 h-full">
+                  <img class="h-50 w-full object-cover rounded-md" src="./img/card/kalkulator.png" alt="" />
+                  <h2 class="my-2 text-2xl font-bold text-white">Some Big Heading.</h2>
+                  <p class="mt-2 text-slate-200 font-thin">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere animi earum quasi deleniti, maxime numquam.
+                  </p>
+                </div>
+              </li>
+              <li class="p-5">
+                <div class="border rounded-lg p-5 h-full">
+                  <img class="h-50 w-full object-cover rounded-md" src="./img/card/kalkulator.png" alt="" />
+                  <h2 class="my-2 text-2xl font-bold text-white">Some Big Heading.</h2>
+                  <p class="mt-2 text-slate-200 font-thin">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere animi earum quasi deleniti, maxime numquam.
+                  </p>
+                </div>
+              </li>
+              <li class="p-5">
+                <div class="border rounded-lg p-5 h-full">
+                  <img class="h-50 w-full object-cover rounded-md" src="./img/card/kalkulator.png" alt="" />
+                  <h2 class="my-2 text-2xl font-bold text-white">Some Big Heading.</h2>
+                  <p class="mt-2 text-slate-200 font-thin">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere animi earum quasi deleniti, maxime numquam.
+                  </p>
+                </div>
+              </li>
+              <li class="p-5">
+                <div class="border rounded-lg p-5 h-full">
+                  <img class="h-50 w-full object-cover rounded-md" src="./img/card/kalkulator.png" alt="" />
+                  <h2 class="my-2 text-2xl font-bold text-white">Some Big Heading.</h2>
+                  <p class="mt-2 text-slate-200 font-thin">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere animi earum quasi deleniti, maxime numquam.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="w-2/12 flex items-center">
+            <div class="w-full">
+              <button onclick="next()" class="p-3 rounded-full bg-white border border-gray-100 shadow-lg ml-5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <div class="mb-96"></div>
+    </section>
+    <div class="mb-96"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>

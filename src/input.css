@@ -2,21 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.hamburger-line{
-    @apply w-[30px] h-[2px] my-2 block bg-white;
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-white;
 }
 
-.hamburger-active > span:nth-child(1){
-    @apply rotate-45 ;
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
 }
 
-
-.hamburger-active > span:nth-child(3){
-    @apply -rotate-45 ;
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
 }
 
-.hamburger-active > span:nth-child(2){
-    @apply scale-0;
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
 }
 
+.tes6 {
+  @apply hidden;
+}
+
+.reveal {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
