@@ -1,3 +1,5 @@
+// const Aos = require("aos");
+
 const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 
@@ -18,6 +20,16 @@ exp.addEventListener("click", function () {
   grid4.classList.toggle("hidden");
   grid5.classList.toggle("hidden");
   grid6.classList.toggle("hidden");
+  grid4.setAttribute("data-aos", "zoom-in");
+  grid5.setAttribute("data-aos", "zoom-in");
+  grid6.setAttribute("data-aos", "zoom-in");
+
+
+  if (!AOS.initiated) {
+    AOS.init();
+  }
+
+  
 });
 
 let sliderContainer = document.getElementById("sliderContainer");
@@ -69,26 +81,26 @@ setTimeout(() => {
   autoPlay();
 }, 3000);
 
-let text = new SplitType("#text");
+// let text = new SplitType("#text");
 
-let character = document.querySelectorAll(".char");
+// let character = document.querySelectorAll(".char");
 
-for (let i = 0; i < character.length; i++) {
-  character[i].classList.add("translate-y-full");
-}
+// for (let i = 0; i < character.length; i++) {
+//   character[i].classList.add("translate-y-full");
+// }
 
-gsap.to(".char", {
-  y: 0,
-  stagger: 0.05,
-  delay: 0.02,
-  duration: 0.5,
-});
+// gsap.to(".char", {
+//   y: 0,
+//   stagger: 0.05,
+//   delay: 0.02,
+//   duration: 0.5,
+// });
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".divHome", {
-  scrollTrigger: ".divHome",
-  id:"example",
-  x: 500,
-});
-console.log(ScrollTrigger.getById("example").animation);
+// gsap.to(".divHome", {
+//   scrollTrigger: ".divHome",
+//   id:"example",
+//   x: 500,
+// });
+// console.log(ScrollTrigger.getById("example").animation);

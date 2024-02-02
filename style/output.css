@@ -730,10 +730,6 @@ video {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .max-w-80 {
   max-width: 20rem;
 }
@@ -764,10 +760,6 @@ video {
 
 .justify-start {
   justify-content: flex-start;
-}
-
-.justify-center {
-  justify-content: center;
 }
 
 .justify-between {
@@ -1086,11 +1078,6 @@ video {
 .reveal {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.hover\:translate-x-6:hover {
-  --tw-translate-x: 1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:cursor-pointer:hover {
