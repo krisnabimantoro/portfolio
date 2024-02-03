@@ -86,7 +86,7 @@
           </div>
           <div class="w-full self-center px-4 lg:w-1/2">
             <div class="relative mt-10 lg:right-0 lg:ml-24">
-              <div class="border-spacing box1">
+              <div class="border-secondary">
                 <img
                   src="./img/profile.png"
                   alt=""
@@ -104,8 +104,8 @@
       <div class="container font-montserrat">
         <div class="flex">
           <div class="w-full text-white divHome" id="divHome">
-            <h1 class="top-0 text-center text-secondary font-semibold text-2xl lg:text-4xl">About Me</h1>
-            <h2 class="mt-16 font-thin text-center transition" data-aos="fade-right">
+            <h1 class="top-0 text-secondary font-semibold text-2xl lg:text-4xl">About Me</h1>
+            <h2 class="mt-16 font-thin transition" data-aos="fade-right">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus fugiat impedit ad deserunt! Voluptates maiores ea cumque
               repellendus nostrum quas temporibus quasi tempore labore adipisci facere cum repudiandae numquam, iure nemo unde minus
               eligendi et illum corporis! Distinctio, voluptate nihil repudiandae nulla harum natus ea modi aspernatur illum sapiente ab.
@@ -126,14 +126,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 text-white">
               <!-- Grid 1 -->
               <div
-                class="border-2 p-3 rounded-2xl flex hover:shadow-2xl hover:shadow-slate-950 duration-200 transition hover:cursor-pointer"
+                id="show-grid1"
+                class="show-modal border-2 p-3 rounded-2xl flex hover:shadow-2xl hover:shadow-slate-950 duration-200 transition hover:cursor-pointer"
                 data-aos="zoom-in"
               >
                 <img src="./img/gdsc.png" alt="gdsc" class="w-14 h-14 rounded-xl my-auto" />
                 <div class="flex-wrap ml-3">
                   <h3 class="font-semibold text">Hackfest 2024</h3>
-                  <h4 class="font-thin text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quo?</h4>
-                  <h5 class="text-xs font-bold">Des 2023 - Jan 2024</h5>
+                  <h4 class="font-thin text-sm">Hustler Role</h4>
+                  <h5 class="text-xs font-bold fixed bottom-0 pb-6">Des 2023 - Jan 2024</h5>
                 </div>
               </div>
 
@@ -213,6 +214,23 @@
         </div>
       </div>
     </section>
+
+    <!-- modal -->
+
+    <div class="modal h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50">
+      <div class="bg-white rounded shadow-lg w-1/3 in-modal">
+        <div class="border-b px-4 py-2">
+          <h3>Tittle</h3>
+        </div>
+        <div class="p-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deserunt deleniti doloribus, odio libero ipsa atque consequuntur
+          recusandae perferendis blanditiis?
+        </div>
+        <div class="flex justify-end items-center w-full border-t p-3">
+          <button class="bg-red-700 close-modal">Close</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Portfolio -->
 
@@ -310,14 +328,14 @@
       </div>
     </section>
 
-    <section id="contact" class="bg-slate-800  pt-16 lg:pt-20 pb-32">
+    <section id="contact" class="bg-slate-800 pt-16 lg:pt-20 pb-32">
       <div class="container">
         <div class="flex mb-11">
           <div class="w-full self-center">
-            <h2 class="text-center text-secondary font-bold text-2xl lg:text-4xl">Contact</h2>
+            <h2 class="text-secondary font-bold text-2xl lg:text-4xl">Contact</h2>
 
-            <ul class="list-none flex mt-20 mx-auto w-full justify-center">
-              <li class="inline-block mx-3">
+            <ul class="list-none flex mt-8 w-full">
+              <li class="inline-block mr-3">
                 <a href="https://xyzuan.my.id/"> <img src="./img/gdsc.png" alt="gdsc" class="w-10" /></a>
               </li>
               <li class="inline-block mx-3">
@@ -334,10 +352,11 @@
         </div>
       </div>
     </section>
-    
+
     <script>
       AOS.init();
     </script>
+    <script src="./js/modal.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/script.js"></script>
   </body>
