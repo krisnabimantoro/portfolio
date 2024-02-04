@@ -1,19 +1,21 @@
 const modal = document.querySelector(".modal");
 const showModal = document.querySelector(".show-modal");
-const closeModal = document.querySelector(".close-modal")
+const closeModal = document.querySelector(".close-modal");
 const inModal = document.querySelector(".in-modal");
 
-showModal.addEventListener("click",function(){
-    modal.classList.remove("hidden")
-    inModal.setAttribute("data-aos", "zoom-in");
+const hideGrid = document.querySelector("#hide");
 
+hideGrid.classList.add("hidden");
 
-    if (!AOS.initiated) {
-      AOS.init();
-    }
-})
+showModal.addEventListener("click", function () {
+  modal.classList.remove("hidden");
+  inModal.setAttribute("data-aos", "zoom-in");
 
-closeModal.addEventListener("click",function(){
-    modal.classList.add("hidden")
-})
+  if (!AOS.initiated) {
+    AOS.init();
+  }
+});
 
+closeModal.addEventListener("click", function () {
+  modal.classList.add("hidden");
+});
